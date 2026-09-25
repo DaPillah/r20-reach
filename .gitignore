@@ -39,3 +39,6 @@ oikos-credentials.md
 
 # stray R20 Docs artifact — content already lives in src/lib/quickReplies.ts
 quick_replies.md
+
+# local dev helpers (not part of the showcase)
+.claude/

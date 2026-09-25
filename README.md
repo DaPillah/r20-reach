@@ -9,6 +9,16 @@ A relationship-first outreach and discipleship-pipeline platform for a multi-cam
 
 ---
 
+## Screenshots
+
+The student-facing capture surfaces (mobile-first, install-nothing). The leader/admin app sits behind auth.
+
+| Cold landing (`/welcome`) | Ways to say hi (`/hi`) |
+|---|---|
+| ![Cold landing page](public/screenshots/welcome.png) | ![Ways to connect](public/screenshots/hi.png) |
+| One-tap survey (`/survey`) | Leader sign-in (`/login`) |
+| ![Quick survey](public/screenshots/survey.png) | ![Sign in](public/screenshots/login.png) |
+
 ## What it is
 
 Three products in one codebase:
