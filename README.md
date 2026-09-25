@@ -66,4 +66,5 @@ A collaboration between **Ekow Bentsi-Enchill** and **Justin Oketunmbi**.
 
 ## License
 
-Released under the [MIT License](./LICENSE).
+Source-available for **viewing and evaluation only** — all rights reserved. No reuse
+without written permission. See [LICENSE](./LICENSE).
