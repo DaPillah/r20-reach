@@ -16,8 +16,8 @@ The student-facing capture surfaces (mobile-first, install-nothing). The leader/
 | Cold landing (`/welcome`) | Ways to say hi (`/hi`) |
 |---|---|
 | ![Cold landing page](public/screenshots/welcome.png) | ![Ways to connect](public/screenshots/hi.png) |
-| One-tap survey (`/survey`) | Leader sign-in (`/login`) |
-| ![Quick survey](public/screenshots/survey.png) | ![Sign in](public/screenshots/login.png) |
+| Leader home (`Today`) | Leader sign-in (`/login`) |
+| ![Today home](public/screenshots/today.jpg) | ![Sign in](public/screenshots/login.png) |
 
 ## What it is
 
