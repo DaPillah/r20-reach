@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/DaPillah/r20-reach/actions/workflows/ci.yml/badge.svg)
 
-A relationship-first outreach and discipleship-pipeline platform for a multi-campus college ministry (Columbia, NYU, CCNY, Pace). Built as an in-house replacement for a ~$1,095/mo commercial tool, running for ~$35–70/mo.
+A relationship-first outreach and discipleship-pipeline platform for a multi-campus college ministry (Columbia, NYU, CCNY, Pace).
 
 > **About this repository**
 > This is a **sanitized public showcase** of a private production application. Real member data, personal contact details, credentials, and internal operations documents have been removed, and the sample data is synthetic. It exists to demonstrate the engineering — not to run the live ministry.
@@ -23,15 +23,11 @@ The student-facing capture surfaces (mobile-first, install-nothing). The leader/
 
 Three products in one codebase:
 
-1. **A follow-up / touchpoint engine** — two-way SMS + email with automated, durable "journeys," a shared inbox, and consent compliance baked in. This is the piece that replaced the paid tool.
+1. **A follow-up / touchpoint engine** — two-way SMS + email with automated, durable "journeys," a shared inbox, and consent compliance baked in.
 2. **A discipleship pipeline** — a five-stage funnel (Campus → Crowd → Community → Committed → Core) where *placement into a small group* is the leading metric, not raw contact counts.
 3. **A leader operating system** — each leader gets a daily "Today" queue of who to reach out to, with a pre-drafted message they send from their own phone in one tap.
 
 One codebase serves three surfaces: mobile-first for leaders, desktop for admins, and an install-nothing web capture flow for students.
-
-## Why it was built
-
-A campus ministry was paying enterprise SaaS prices for visitor follow-up. This project replaced it with something cheaper, purpose-built for the ministry's actual funnel, and designed to grow into a whole-church platform by *integrating* a system of record rather than rebuilding one.
 
 ## How it works
 
