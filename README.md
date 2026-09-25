@@ -1,5 +1,7 @@
 # R20 Reach
 
+![CI](https://github.com/DaPillah/r20-reach/actions/workflows/ci.yml/badge.svg)
+
 A relationship-first outreach and discipleship-pipeline platform for a multi-campus college ministry (Columbia, NYU, CCNY, Pace). Built as an in-house replacement for a ~$1,095/mo commercial tool, running for ~$35–70/mo.
 
 > **About this repository**
@@ -21,6 +23,26 @@ One codebase serves three surfaces: mobile-first for leaders, desktop for admins
 
 A campus ministry was paying enterprise SaaS prices for visitor follow-up. This project replaced it with something cheaper, purpose-built for the ministry's actual funnel, and designed to grow into a whole-church platform by *integrating* a system of record rather than rebuilding one.
 
+## How it works
+
+A student is captured once (a QR at an event, a link, or a sign-in). From there the system tracks them through the funnel and puts the *next relationship* in front of the right leader every day — never a mass blast.
+
+```mermaid
+flowchart TD
+    A["Student capture: QR, link, or event sign-in"] --> B["Person created at 'Campus' stage"]
+    B --> C["5C pipeline: Campus, Crowd, Community, Committed, Core"]
+    C --> D["Daily 'Today' queue per leader (who's due)"]
+    D --> E["Leader sends a pre-drafted text from their own phone"]
+    E -->|"leader inactive ~24h"| F["Journey engine (Inngest) auto-sends from the org number"]
+    E --> G["Two-way SMS (Twilio) and email (Resend)"]
+    F --> G
+    G --> H["Inbound webhook to a shared inbox, pause-on-reply"]
+    H --> C
+    G --> I["Guardrails: consent trail, STOP, quiet hours, links on own domain"]
+```
+
+The **"who's due today" logic** and the **send-window / quiet-hours math** are the heart of the system and live as pure, unit-tested functions in `src/lib` — independent of the database and framework.
+
 ## Stack
 
 - **Next.js** (App Router, PWA) + **React 19** + **Tailwind**
@@ -36,7 +58,7 @@ A campus ministry was paying enterprise SaaS prices for visitor follow-up. This 
 - **`src/lib/`** — the domain core, framework-free and unit-tested: the funnel model, the "who's due today" queue logic, event/invite routing, SMS composition, de-identification, and the journey engine.
 - **`src/app/`** — Next.js routes and server actions; server actions enforce authorization server-side (the UI is never trusted).
 - **`supabase/migrations/`** — the full Postgres data model as incremental migrations, with synthetic seed data for local development.
-- **`tests/`** — unit tests for the scheduling/queue logic that decides outreach cadence.
+- **`tests/`** — unit tests for the pure core: the "who's due" queue logic, send-window/quiet-hours math, event/invite routing, and phone + formatting helpers.
 
 ### Design decisions worth calling out
 
