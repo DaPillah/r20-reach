@@ -62,7 +62,7 @@ npm run build     # production build
 
 ## Authors
 
-A collaboration between **Ekow Bentsi-Enchill** and **Justin Oketunmbi**.
+A collaboration between **[Ekow Bentsi-Enchill](https://github.com/ekowbe)** and **[Justin Oketunmbi](https://github.com/DaPillah)**.
 
 ## License
 
