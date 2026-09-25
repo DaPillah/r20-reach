@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Oikos — warm, human, "hearts on fire" but calm. Mobile-first. */
+:root {
+  --paper: #faf6f0;        /* warm background */
+  --surface: #ffffff;      /* cards */
+  --surface-2: #f4ede3;    /* subtle fills */
+  --ink: #201b16;          /* primary text (warm near-black) */
+  --muted: #7a7066;        /* secondary text */
+  --faint: #a89e92;        /* tertiary */
+  --border: #e9e0d3;       /* hairlines */
+  --accent: #c85a2b;       /* ember */
+  --accent-soft: #f6e4d8;  /* ember tint */
+  --accent-ink: #8f3d17;   /* ember text on soft */
+  --gold: #b08a2e;         /* r20.nyc gold (darker for light bg) */
+  --good: #3f7d52;         /* healthy / positive */
+  --good-soft: #e3f0e5;
+  --warn: #b8863b;         /* attention */
+  --warn-soft: #f6ecd6;
+
+  /* 5C funnel stage colors */
+  --s-campus: #8b8178;
+  --s-crowd: #b8863b;
+  --s-community: #c85a2b;
+  --s-committed: #a5476f;
+  --s-core: #5b5aa6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #15110d;
+    --surface: #1f1a15;
+    --surface-2: #241e18;
+    --ink: #f4ece1;
+    --muted: #a89e91;
+    --faint: #776d61;
+    --border: #322a22;
+    --accent: #e8823f;
+    --accent-soft: #35251a;
+    --accent-ink: #f0a877;
+    --gold: #e8c96d;         /* r20.nyc gold */
+    --good: #6ba97e;
+    --good-soft: #1e2c22;
+    --warn: #d3a457;
+    --warn-soft: #2e2718;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-s-campus: var(--s-campus);
+  --color-s-crowd: var(--s-crowd);
+  --color-s-community: var(--s-community);
+  --color-s-committed: var(--s-committed);
+  --color-s-core: var(--s-core);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-playfair);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Headings in Playfair Display (matches r20.nyc's editorial serif). */
+h1 { font-family: var(--font-display), Georgia, serif; }
+
+/* Crowd-facing pages (/join, /invite, /privacy, /sms-terms) — ALWAYS dark and
+   tuned to r20.nyc, regardless of the visitor's OS theme, so the hand-off from
+   an r20.nyc post to the invite/join page is seamless. */
+.crowd-dark {
+  --paper: #141210;
+  --surface: #1c1610;
+  --surface-2: #241d15;
+  --ink: #f5f2ec;
+  --muted: #b3a695;
+  --faint: #857a6b;
+  --border: #2c241b;
+  --accent: #d9642f;
+  --accent-soft: #2a1c12;
+  --accent-ink: #ed9a5f;
+  --good: #6ba97e;
+  --good-soft: #1e2c22;
+  --warn: #d3a457;
+  --warn-soft: #2e2718;
+  --gold: #c9a24e;         /* r20.nyc antique gold (text/accents) */
+  --gold-bright: #d3ac54;  /* r20.nyc filled-button / marquee gold */
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* thin, quiet scrollbars */
+* { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }

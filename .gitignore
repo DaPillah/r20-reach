@@ -1,0 +1,41 @@
+# deps
+node_modules/
+.pnp
+.pnp.js
+
+# next
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# env & secrets
+.env
+.env*.local
+.env.local
+
+# supabase
+.branches
+.temp
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+.vercel
+*.tsbuildinfo
+
+# sensitive project docs (contains EIN / IRS notice)
+r20 campus ministry EIN.pdf
+.env*
+
+# member/roster PII — never commit real people data (imported straight to DB)
+*.xlsx
+*.csv
+*-import*.json
+
+# credentials never belong in the repo (canonical copy: ~/Projects/oikos-credentials.md)
+oikos-credentials.md
+
+# stray R20 Docs artifact — content already lives in src/lib/quickReplies.ts
+quick_replies.md
