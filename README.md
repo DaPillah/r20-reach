@@ -19,16 +19,16 @@ The student-facing capture surfaces (mobile-first, install-nothing). The leader/
     <td align="center">Ways to say hi (<code>/hi</code>)</td>
   </tr>
   <tr>
-    <td align="center"><img src="public/screenshots/welcome.png" alt="Cold landing page" width="320"></td>
-    <td align="center"><img src="public/screenshots/hi.png" alt="Ways to connect" width="320"></td>
+    <td align="center"><img src="public/screenshots/welcome.png?v=2" alt="Cold landing page" width="320"></td>
+    <td align="center"><img src="public/screenshots/hi.png?v=2" alt="Ways to connect" width="320"></td>
   </tr>
   <tr>
     <td align="center">Leader home (<code>Today</code>)</td>
     <td align="center">Leader sign-in (<code>/login</code>)</td>
   </tr>
   <tr>
-    <td align="center"><img src="public/screenshots/today.png" alt="Today home" width="320"></td>
-    <td align="center"><img src="public/screenshots/login.png" alt="Sign in" width="320"></td>
+    <td align="center"><img src="public/screenshots/today.png?v=2" alt="Today home" width="320"></td>
+    <td align="center"><img src="public/screenshots/login.png?v=2" alt="Sign in" width="320"></td>
   </tr>
 </table>
 
