@@ -1,6 +1,6 @@
 # Oikos
 
-![CI](https://github.com/DaPillah/r20-reach/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/DaPillah/oikos-app/actions/workflows/ci.yml/badge.svg)
 
 Oikos is a relationship-first outreach and discipleship-pipeline platform for a multi-campus college ministry (Columbia, NYU, CCNY, Pace).
 
