@@ -2039,7 +2039,7 @@ export async function setNightsInfoAction(text: string): Promise<void> {
 }
 
 // ── "What to Expect Tonight" card — hand-edit editor (admin) ──────────────────
-// The weekly card that r20-reach renders on /hi's "expect" view. The sermon-prep app
+// The weekly card that Oikos renders on /hi's "expect" view. The sermon-prep app
 // auto-publishes it into public.tonight_card, but an admin can also hand-write/fix one
 // here. Same shared table; ALWAYS org-scoped to the SESSION org (like nights_info), so
 // it can never touch another org's row and needs no env. Fields are split pre-talk-safe

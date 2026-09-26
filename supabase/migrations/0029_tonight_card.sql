@@ -4,7 +4,7 @@
 -- one page, not two (see SPEC_what_to_expect_tonight.md).
 --
 -- Two apps, one shared Supabase: the sermon-prep app is the PUBLISHER (a "Make Tonight"
--- move on a finished Prep upserts a row here, service-role, org-scoped) and r20-reach is
+-- move on a finished Prep upserts a row here, service-role, org-scoped) and Oikos is
 -- the READER (getTonightCardAction renders it under the evergreen copy on /hi's "expect").
 --
 -- Deliberately in the `public` schema (not r20reach): it's the cross-app seam sermon-prep
