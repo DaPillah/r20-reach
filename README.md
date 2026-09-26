@@ -1,8 +1,8 @@
-# R20 Reach
+# Oikos
 
 ![CI](https://github.com/DaPillah/r20-reach/actions/workflows/ci.yml/badge.svg)
 
-A relationship-first outreach and discipleship-pipeline platform for a multi-campus college ministry (Columbia, NYU, CCNY, Pace).
+Oikos is a relationship-first outreach and discipleship-pipeline platform for a multi-campus college ministry (Columbia, NYU, CCNY, Pace).
 
 > **About this repository**
 > This is a **sanitized public showcase** of a private production application. Real member data, personal contact details, credentials, and internal operations documents have been removed, and the sample data is synthetic. It exists to demonstrate the engineering — not to run the live ministry.
@@ -36,11 +36,9 @@ The student-facing capture surfaces (mobile-first, install-nothing). The leader/
 
 Three products in one codebase:
 
-1. **A follow-up / touchpoint engine** — two-way SMS + email with automated, durable "journeys," a shared inbox, and consent compliance baked in.
+1. **A follow-up / touchpoint engine** — two-way SMS with automated, durable "journeys," a shared inbox, and consent compliance baked in.
 2. **A discipleship pipeline** — a five-stage funnel (Campus → Crowd → Community → Committed → Core) where *placement into a small group* is the leading metric, not raw contact counts.
 3. **A leader operating system** — each leader gets a daily "Today" queue of who to reach out to, with a pre-drafted message they send from their own phone in one tap.
-
-One codebase serves three surfaces: mobile-first for leaders, desktop for admins, and an install-nothing web capture flow for students.
 
 ## How it works
 
@@ -53,10 +51,8 @@ flowchart TD
     C --> D["Daily 'Today' queue per leader (who's due)"]
     D --> E["Leader sends a pre-drafted text from their own phone"]
     E -->|"leader inactive ~24h"| F["Journey engine (Inngest) auto-sends from the org number"]
-    E --> G["Two-way SMS (Twilio) and email (Resend)"]
+    E --> G["Two-way SMS (Twilio)"]
     F --> G
-    G --> H["Inbound webhook to a shared inbox, pause-on-reply"]
-    H --> C
     G --> I["Guardrails: consent trail, STOP, quiet hours, links on own domain"]
 ```
 
@@ -67,7 +63,7 @@ The **"who's due today" logic** and the **send-window / quiet-hours math** are t
 - **Next.js** (App Router, PWA) + **React 19** + **Tailwind**
 - **Supabase** (Postgres, Auth, Row-Level Security, Realtime)
 - **Inngest** for durable, scheduled message journeys
-- **Twilio** (SMS) and **Resend** (email)
+- **Twilio** (SMS)
 - **Anthropic SDK** for an opt-in, safety-gated counseling-assist feature
 - **Vercel** for hosting
 - TypeScript end to end (~17k lines)
@@ -90,7 +86,7 @@ The **"who's due today" logic** and the **send-window / quiet-hours math** are t
 
 ```bash
 npm install
-cp .env.example .env.local   # fill in your own Supabase (and optional Twilio/Resend) keys
+cp .env.example .env.local   # fill in your own Supabase (and optional Twilio) keys
 npm run dev
 ```
 
