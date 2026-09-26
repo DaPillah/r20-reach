@@ -27,7 +27,7 @@ The student-facing capture surfaces (mobile-first, install-nothing). The leader/
     <td align="center">Leader sign-in (<code>/login</code>)</td>
   </tr>
   <tr>
-    <td align="center"><img src="public/screenshots/today.jpg" alt="Today home" height="290"></td>
+    <td align="center"><img src="public/screenshots/today.png" alt="Today home" height="290"></td>
     <td align="center"><img src="public/screenshots/login.png" alt="Sign in" height="290"></td>
   </tr>
 </table>
