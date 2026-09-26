@@ -13,11 +13,24 @@ A relationship-first outreach and discipleship-pipeline platform for a multi-cam
 
 The student-facing capture surfaces (mobile-first, install-nothing). The leader/admin app sits behind auth.
 
-| Cold landing (`/welcome`) | Ways to say hi (`/hi`) |
-|---|---|
-| ![Cold landing page](public/screenshots/welcome.png) | ![Ways to connect](public/screenshots/hi.png) |
-| Leader home (`Today`) | Leader sign-in (`/login`) |
-| ![Today home](public/screenshots/today.jpg) | ![Sign in](public/screenshots/login.png) |
+<table>
+  <tr>
+    <td align="center">Cold landing (<code>/welcome</code>)</td>
+    <td align="center">Ways to say hi (<code>/hi</code>)</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="public/screenshots/welcome.png" alt="Cold landing page" height="290"></td>
+    <td align="center"><img src="public/screenshots/hi.png" alt="Ways to connect" height="290"></td>
+  </tr>
+  <tr>
+    <td align="center">Leader home (<code>Today</code>)</td>
+    <td align="center">Leader sign-in (<code>/login</code>)</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="public/screenshots/today.jpg" alt="Today home" height="290"></td>
+    <td align="center"><img src="public/screenshots/login.png" alt="Sign in" height="290"></td>
+  </tr>
+</table>
 
 ## What it is
 
